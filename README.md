@@ -3,7 +3,7 @@ WinBinder
 
 WinBinder - The native Windows binding for PHP 8.
 
-[![Build status](https://ci.appveyor.com/api/projects/status/github/Bearsampp/php_winbinder?svg=true&branch=main)](https://ci.appveyor.com/project/Bear/php-winbinder) PHP 8.4.16 x64
+[![Build status](https://ci.appveyor.com/api/projects/status/github/Bearsampp/php_winbinder?svg=true&branch=main)](https://ci.appveyor.com/project/Bear/php-winbinder) PHP 8.4.17 x64
 
 What is WinBinder?
 ==================
@@ -16,12 +16,20 @@ WinBinder is an open source extension to PHP, the script programming language. I
 
 [IDE Stub File](https://gist.github.com/crispy-computing-machine/ee4e94ba5e4870a7907535185af14ba0)
 
+Project Structure
+=================
+
+- **lib/** - Working WinBinder PHP library with core classes and utilities
+- **wb/** - C source code for the WinBinder extension
+- **core/** - Core PHP classes and libraries
+- **docs/** - Complete documentation and manual
+
 PHP Build Compatibility
 =======================
 
 - PHP 7.* ❌ (unsupported)
 - PHP 8.3.29 ✅ (x64, x86, TS, NTS) - See [8.3 branch](https://github.com/Bearsampp/php_winbinder/tree/8.3)
-- PHP 8.4.16 ✅ (x64, x86, TS, NTS) - Main branch
+- PHP 8.4.17 ✅ (x64, x86, TS, NTS) - Main branch
 
 (For older PHP version compatibility please see PECL website for old .dll's)
 
