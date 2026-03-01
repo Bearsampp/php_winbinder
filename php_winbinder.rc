@@ -21,9 +21,9 @@
 #	include <winres.h>
 #endif
 
-#define FILE_DESCRIPTION "WinBinder extension for PHP."
+#define FILE_DESCRIPTION "WinBinder extension for PHP 8.5."
 #define PRODUCT_NAME "WinBinder"
-#define P_VERSION "7.2"
+#define P_VERSION "8.5"
 #define FILE_NAME "php_winbinder.dll"
 
 //#include "winres.h"
