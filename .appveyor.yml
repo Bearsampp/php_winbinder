@@ -45,16 +45,10 @@ build_script:
   ps: |
     .\build_all.ps1 -PhpVersion "8.5.30" -DevPackVersion "8.5.1" -VcVersion "vs17"
 
-artifacts:
-  - path: Release\php_winbinder.dll
-    name: php_winbinder.dll
-  - path: Release\php_winbinder.pdb
-    name: php_winbinder.pdb
-
 deploy:
   - provider: GitHub
     auth_token: $(GH_PAT)
-    artifact: /.*\.(dll|pdb)/
+    artifact: /php-winbinder-.*\.7z/
     draft: false
     prerelease: false
     force_update: true
