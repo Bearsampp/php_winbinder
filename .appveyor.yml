@@ -54,12 +54,10 @@ artifacts:
 deploy:
   - provider: GitHub
     auth_token: $(GH_PAT)
-    artifact: php_winbinder.dll
+    artifact: /.*\.(dll|pdb)/
     draft: false
     prerelease: false
     force_update: true
-    release: WinBinder-2026.3.1
     tag: $(APPVEYOR_REPO_TAG_NAME)
     on:
-      branch: main
       appveyor_repo_tag: true
