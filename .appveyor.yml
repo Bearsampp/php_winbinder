@@ -43,7 +43,7 @@ cache:
 
 build_script:
   ps: |
-    .\build_all.ps1 -PhpVersion "8.5.30" -VcVersion "vs17"
+    .\build_all.ps1 -PhpVersion "8.5.30" -DevPackVersion "8.5.1" -VcVersion "vs17"
 
 artifacts:
   - path: Release\php_winbinder.dll

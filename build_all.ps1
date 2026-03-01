@@ -1,7 +1,13 @@
 param(
     [string]$PhpVersion = "8.4.16",
+    [string]$DevPackVersion = $null,
     [string]$VcVersion = "vs17"
 )
+
+# If DevPackVersion is not specified, use PhpVersion
+if ([string]::IsNullOrEmpty($DevPackVersion)) {
+    $DevPackVersion = $PhpVersion
+}
 
 $ErrorActionPreference = "Stop"
 
@@ -18,7 +24,7 @@ foreach ($arch in $archs) {
         Write-Host "============================================================`n"
 
         $ts_part = if ($ts -eq "0") { "-nts" } else { "" }
-        $develPackName = "php-devel-pack-$PhpVersion$ts_part-Win32-$VcVersion-$arch.zip"
+        $develPackName = "php-devel-pack-$DevPackVersion$ts_part-Win32-$VcVersion-$arch.zip"
         $develPackPath = "$buildCache\$develPackName"
         
         $url_releases = "https://windows.php.net/downloads/releases/$develPackName"
