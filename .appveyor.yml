@@ -1,9 +1,11 @@
-version: "{branch}.build.{build}"
-skip_tags: true
+version: 2026.3.1.{build}
+skip_tags: false
 
 branches:
   only:
     - main
+    - 8.4
+    - 8.3
 
 clone_folder:  c:\projects\winbinder
 
@@ -41,16 +43,23 @@ cache:
 
 build_script:
   ps: |
-    .\build_all.ps1 -PhpVersion "8.4.16" -VcVersion "vs17"
+    .\build_all.ps1 -PhpVersion "8.5.30" -VcVersion "vs17"
+
+artifacts:
+  - path: Release\php_winbinder.dll
+    name: php_winbinder.dll
+  - path: Release\php_winbinder.pdb
+    name: php_winbinder.pdb
 
 deploy:
   - provider: GitHub
     auth_token: $(GH_PAT)
-    artifact: /.*\.7z/
+    artifact: php_winbinder.dll
     draft: false
     prerelease: false
     force_update: true
-    release: WinBinder-8.4.16
-    tag: v8.4.16
+    release: WinBinder-2026.3.1
+    tag: $(APPVEYOR_REPO_TAG_NAME)
     on:
       branch: main
+      appveyor_repo_tag: true
