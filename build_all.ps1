@@ -27,18 +27,32 @@ foreach ($arch in $archs) {
         $develPackName = "php-devel-pack-$DevPackVersion$ts_part-Win32-$VcVersion-$arch.zip"
         $develPackPath = "$buildCache\$develPackName"
         
+        Write-Host "Looking for dev pack: $develPackName"
+        Write-Host "Arch: $arch, TS: $ts, TS_part: $ts_part"
+        
         $url_releases = "https://windows.php.net/downloads/releases/$develPackName"
         $url_archives = "https://windows.php.net/downloads/releases/archives/$develPackName"
 
         # 1. Download PHP Development Pack
         if (-not (Test-Path $develPackPath)) {
-            Write-Host "Downloading PHP development pack..."
+            Write-Host "Downloading PHP development pack from: $url_releases"
             try {
                 Invoke-WebRequest $url_releases -OutFile $develPackPath -UserAgent 'Mozilla/5.0'
+                Write-Host "Successfully downloaded from releases"
             } catch {
                 Write-Host "Failed to download from releases, trying archives..."
-                Invoke-WebRequest $url_archives -OutFile $develPackPath -UserAgent 'Mozilla/5.0'
+                try {
+                    Invoke-WebRequest $url_archives -OutFile $develPackPath -UserAgent 'Mozilla/5.0'
+                    Write-Host "Successfully downloaded from archives"
+                } catch {
+                    Write-Host "Failed to download from both locations"
+                    Write-Host "Releases URL: $url_releases"
+                    Write-Host "Archives URL: $url_archives"
+                    Write-Error "Could not download PHP development pack"
+                }
             }
+        } else {
+            Write-Host "Dev pack already cached at: $develPackPath"
         }
 
         # 2. Extract Devel Pack
@@ -47,6 +61,8 @@ foreach ($arch in $archs) {
         
         # Clean up any potentially conflicting directories first
         $possibleDirNames = @(
+            "php-$DevPackVersion-devel-$VcVersion-$arch",
+            "php-$DevPackVersion-nts-devel-$VcVersion-$arch",
             "php-$PhpVersion-devel-$VcVersion-$arch",
             "php-$PhpVersion-nts-devel-$VcVersion-$arch"
         )
