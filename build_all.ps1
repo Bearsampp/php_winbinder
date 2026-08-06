@@ -1,5 +1,5 @@
 param(
-    [string]$PhpVersion = "8.4.16",
+    [string]$PhpVersion = "8.5.9",
     [string]$DevPackVersion = $null,
     [string]$VcVersion = "vs17"
 )

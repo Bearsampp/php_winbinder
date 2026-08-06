@@ -30,7 +30,7 @@ Remote Branches:
 Three files were updated and committed:
 
 1. **README.md**
-   - Added PHP 8.5.30 compatibility information
+   - Added PHP 8.5.9 compatibility information
    - Added conversion documentation links
    - Added key findings
 
