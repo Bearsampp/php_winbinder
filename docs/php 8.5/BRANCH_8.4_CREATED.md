@@ -32,7 +32,7 @@ The 8.4 branch contains:
 - ✓ All function implementations
 
 ### Documentation
-- ✓ PHP 8.5.9 conversion documentation
+- ✓ PHP 8.4.25 conversion documentation
 - ✓ Compatibility reports
 - ✓ Upgrade guides
 - ✓ Quick reference guides
@@ -52,7 +52,7 @@ The 8.4 branch contains:
 The following changes were committed:
 
 1. **README.md**
-   - Added PHP 8.5.9 compatibility information
+   - Added PHP 8.4.25 compatibility information
    - Added links to PHP 8.5 conversion documentation
    - Added key findings summary
 

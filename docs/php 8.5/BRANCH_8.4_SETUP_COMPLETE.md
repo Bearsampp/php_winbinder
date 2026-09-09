@@ -16,8 +16,8 @@ A new PHP 8.4 branch has been created in the WinBinder repository to preserve an
 The following changes were committed to the 8.4 branch:
 
 #### README.md Updates
-- Added PHP 8.5.9 to compatibility list
-- Added "PHP 8.5.9 Conversion Documentation" section
+- Added PHP 8.4.25 to compatibility list
+- Added "PHP 8.4.25 Conversion Documentation" section
 - Added links to all PHP 8.5 conversion documentation
 - Added key findings summary
 
