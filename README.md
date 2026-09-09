@@ -3,7 +3,7 @@ WinBinder
 
 WinBinder - The native Windows binding for PHP 8.
 
-[![Build status](https://ci.appveyor.com/api/projects/status/github/Bearsampp/php_winbinder?svg=true&branch=main)](https://ci.appveyor.com/project/Bear/php-winbinder) PHP 8.5.9 x64
+[![Build status](https://ci.appveyor.com/api/projects/status/github/Bearsampp/php_winbinder?svg=true&branch=main)](https://ci.appveyor.com/project/Bear/php-winbinder) PHP 8.5.10 x64
 
 What is WinBinder?
 ==================
@@ -30,20 +30,20 @@ PHP Build Compatibility
 - PHP 7.* ❌ (unsupported)
 - PHP 8.3.29 ✅ (x64, x86, TS, NTS) - See [8.3 branch](https://github.com/Bearsampp/php_winbinder/tree/8.3)
 - PHP 8.4.16 ✅ (x64, x86, TS, NTS) - See [8.4 branch](https://github.com/Bearsampp/php_winbinder/tree/8.4)
-- PHP 8.5.9 ✅ (x64, x86, TS, NTS) - **Fully Compatible** - Main branch
+- PHP 8.5.10 ✅ (x64, x86, TS, NTS) - **Fully Compatible** - Main branch
 
 (For older PHP version compatibility please see PECL website for old .dll's)
 
-**PHP 8.5.9 Upgrade Status**: ✅ **COMPLETE** - No code changes required. See [PHP 8.5 Documentation](docs/php%208.5/) for details.
+**PHP 8.5.10 Upgrade Status**: ✅ **COMPLETE** - No code changes required. See [PHP 8.5 Documentation](docs/php%208.5/) for details.
 
-PHP 8.5.9 Conversion Documentation
+PHP 8.5.10 Conversion Documentation
 ====================================
 
-The WinBinder extension has been analyzed and verified for full compatibility with PHP 8.5.9. 
+The WinBinder extension has been analyzed and verified for full compatibility with PHP 8.5.10. 
 
 **Status**: ✅ **FULLY COMPATIBLE** - No code changes required
 
-For detailed information about the PHP 8.5.9 conversion, see the documentation in [`docs/php 8.5/`](docs/php%208.5/):
+For detailed information about the PHP 8.5.10 conversion, see the documentation in [`docs/php 8.5/`](docs/php%208.5/):
 
 - **[START_HERE.txt](docs/php%208.5/START_HERE.txt)** - Quick navigation guide
 - **[README_CONVERSION.md](docs/php%208.5/README_CONVERSION.md)** - Documentation index

@@ -1,5 +1,10 @@
-version: 2026.8.6.{build}
+version: 0.0.0.{build}
 skip_tags: false
+
+init:
+  - ps: |
+      $date = Get-Date -Format "yyyy.M.d"
+      Update-AppveyorBuild -Version "$date.$env:APPVEYOR_BUILD_NUMBER"
 
 branches:
   only:
@@ -43,7 +48,7 @@ cache:
 
 build_script:
   ps: |
-    .\build_all.ps1 -PhpVersion "8.5.9" -DevPackVersion "8.5.9" -VcVersion "vs17"
+    .\build_all.ps1 -PhpVersion "8.5.10" -DevPackVersion "8.5.10" -VcVersion "vs17"
 
 deploy:
   - provider: GitHub
