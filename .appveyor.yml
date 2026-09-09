@@ -1,9 +1,9 @@
-version: 0.0.0.{build}
+version: 2026.9.9.{build}
 skip_tags: false
 
 init:
   - ps: |
-      $date = Get-Date -Format "yyyy.M.d"
+      $date = Get-Date -Format "yyyy.MM.dd"
       Update-AppveyorBuild -Version "$date.$env:APPVEYOR_BUILD_NUMBER"
 
 branches:
